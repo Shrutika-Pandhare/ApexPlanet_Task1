@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+    <!-- Banner -->
+      <div class="back1">
+        <img src="images/back1.jpg" alt="banner1">
+          <h1>The Academic Art Showcase</h1>
+            <div class="back-text">
+              <p>Celebrate the talent of our student artists—explore their paintings and cast your vote!</p>
+            </div>
+      </div>
+
+      
+       <!-- images -->
+      <h2>Explore</h2> 
+
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/art1.jpg" alt="art1">
+        <button onclick="likeImage('art')">❤️</button>
+      </div>
+
+    <div class="gallery-item">
+      <img src="images/art2.jpg" alt="art2">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="images/art3.jpg" alt="art3">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art4.jpg" alt="art4">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art5.jpg" alt="art5">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art6.jpg" alt="art6">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art7.jpg" alt="art7">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art8.jpg" alt="art8">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art9.jpg" alt="art9">
+      <button onclick="likeImage('art')">❤️</button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art10.jpg" alt="art10">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art11.jpg" alt="art11">
+      <button onclick="likeImage('art')">❤️</button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art12.jpg" alt="art12">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art13.jpg" alt="art13">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art14.jpg" alt="art14">
+      <button onclick="likeImage('art')">❤️ </button>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/art15.jpg" alt="art15">
+      <button onclick="likeImage('art')">❤️</button>
+    </div>
+
+   
+</div>
+
+<!-- Image Popup -->
+<div id="popup-modal" class="popup-modal">
+  <span class="close-btn">&times;</span>
+  <img class="popup-content" id="popup-img">
+</div>
+
+
+<hr color="blue">
+
+
+<div class="social-section">
+  <h3>Send your artful messages and follow us on</h3>
+  <div class="social-icons">
+    <a href="https://www.youtube.com/" class="fa-brands fa-youtube"></a>
+    <a href="https://www.pinterest.com/" class="fa-brands fa-pinterest"></a>
+    <a href="https://twitter.com/" class="fa-brands fa-twitter"></a>
+    <a href="https://www.instagram.com/" class="fa-brands fa-instagram"></a>
+  </div>
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+   function likeImage(art) {
+    alert("Thanks for voting :D");
+
+  }
+
+  const modal = document.getElementById("popup-modal");
+  const modalImg = document.getElementById("popup-img");
+  const closeBtn = document.querySelector(".close-btn");
+
+  document.querySelectorAll(".gallery-item img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+</script>
+</body>
+</html>
